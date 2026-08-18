@@ -252,6 +252,8 @@ class Formulas:
         return peso/ altura**2
 
     def hipotenusa_pitagoras(self, cateto1, cateto2):
+        
+        import math
         """
         Calcula la longitud de la hipotenusa de un triángulo rectángulo.
 
@@ -267,4 +269,4 @@ class Formulas:
         Ejemplo:
             hipotenusa_pitagoras(3, 4) -> 5.0
         """
-        pass
+        return math.sqrt(cateto1**2 + cateto2**2)
