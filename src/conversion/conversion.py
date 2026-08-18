@@ -58,8 +58,10 @@ class Conversion:
         Ejemplo:
             metros_a_pies(1) -> 3.28084
         """
-        pass
-    
+        pies= metros * 3.28084
+        return pies
+
+ 
     def pies_a_metros(self, pies):
         """
         Convierte distancia de pies a metros.
