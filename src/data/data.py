@@ -130,7 +130,16 @@ class Data:
         Returns:
             bool: True si conjunto1 es subconjunto de conjunto2, False en caso contrario
         """
-        pass
+        for i in range(len(conjunto1)):
+            existe = False
+            for j in range(len(conjunto2)):
+                if(conjunto1[i]== conjunto2[j]):
+                    existe = True
+                    break
+            if not existe : 
+                return False
+        return True
+        
     
     def implementar_pila(self):
         """
