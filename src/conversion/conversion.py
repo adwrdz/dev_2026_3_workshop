@@ -220,4 +220,29 @@ class Conversion:
             morse_a_texto("... --- ...") -> "SOS"
             morse_a_texto(".... . .-.. .-.. ---") -> "HELLO"
         """
-        pass
+        letras = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        letrasmorse = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----."]
+        
+        palabras = morse.split("  ")
+        resultado = ""
+        indice_palabra = 0
+        
+        while indice_palabra < len(palabras):
+            codigos = palabras[indice_palabra].split(" ")
+            indice_codigo = 0
+            while indice_codigo < len(codigos):
+                codigo = codigos[indice_codigo]
+                if codigo != "":
+                    indice = letrasmorse.index(codigo)
+                    letra = letras[indice]
+                    resultado = resultado + letra
+                indice_codigo = indice_codigo + 1
+            if indice_palabra < len(palabras) - 1:
+                resultado = resultado + " "
+            indice_palabra = indice_palabra + 1
+            
+            resultado = resultado.strip()
+        return resultado
+        
+        
+        
