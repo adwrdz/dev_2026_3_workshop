@@ -109,7 +109,15 @@ class Data:
         Returns:
             int: El número que falta en la secuencia
         """
-        pass
+        
+        suma1 = 0
+        suma2 = 0
+        for i in range(len(lista)):
+            suma1 += lista[i]
+        for y in range(1,len(lista)+2):
+            suma2 += y
+        faltante = suma2-suma1
+        return faltante
     
     def es_subconjunto(self, conjunto1, conjunto2):
         """
