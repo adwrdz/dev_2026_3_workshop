@@ -76,7 +76,9 @@ class Data:
         Returns:
             list: Lista combinada y ordenada
         """
-        pass
+        listaCompleta = lista1 + lista2        
+        listaCompleta.sort()
+        return listaCompleta 
     
     def rotar_lista(self, lista, k):
         """
