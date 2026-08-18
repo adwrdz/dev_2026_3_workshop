@@ -218,4 +218,18 @@ class Data:
         Returns:
             list: Matriz transpuesta
         """
+        transpuesta = []
+        if len(matriz) == 0:
+            return []
+        
+        for columna in range(len(matriz[0])):
+            nueva_fila = []
+
+            for fila in range(len(matriz)):
+                nueva_fila.append(matriz[fila][columna])
+
+            transpuesta.append(nueva_fila)
+
+        return transpuesta
+            
         pass
