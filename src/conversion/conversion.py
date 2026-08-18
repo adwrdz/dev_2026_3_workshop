@@ -1,7 +1,7 @@
 class Conversion:
     def celsius_a_fahrenheit(self, celsius):
-        """
-        Convierte temperatura de Celsius a Fahrenheit.
+        
+        """Convierte temperatura de Celsius a Fahrenheit.
         
         Args:
             celsius (float): Temperatura en grados Celsius
@@ -14,8 +14,14 @@ class Conversion:
         Ejemplo:
             celsius_a_fahrenheit(0) -> 32.0
             celsius_a_fahrenheit(100) -> 212.0
-        """
-        pass
+
+        """      
+        TempFahrenheit= (celsius * 9/5) + 32
+        
+        return (TempFahrenheit)
+
+
+        
     
     def fahrenheit_a_celsius(self, fahrenheit):
         """
