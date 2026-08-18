@@ -50,7 +50,19 @@ class Data:
         Returns:
             list: Lista sin elementos duplicados
         """
-    pass    
+    
+        sinduplicados = []
+        
+        for i in range (len(lista)):
+            existe = False
+            for y in range (len(sinduplicados)):
+                if lista[i] == sinduplicados[y] and type(lista[i]) == type(sinduplicados[y]):
+                    existe = True
+                    break
+                
+            if not existe :
+                    sinduplicados.append(lista[i])
+        return sinduplicados
             
     
     def merge_ordenado(self, lista1, lista2):
