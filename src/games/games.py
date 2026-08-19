@@ -125,4 +125,25 @@ class Games:
             - La torre se mueve horizontal o verticalmente
             - No puede saltar sobre otras piezas
         """
-        pass
+        if not (0 <= desde_fila < 8 and 0 <= desde_col < 8 and
+                0 <= hasta_fila < 8 and 0 <= hasta_col < 8):
+            return False
+
+        if desde_fila == hasta_fila and desde_col == hasta_col:
+            return False
+
+        if desde_fila != hasta_fila and desde_col != hasta_col:
+            return False
+
+        if desde_fila == hasta_fila:
+            paso = 1 if hasta_col > desde_col else -1
+            for col in range(desde_col + paso, hasta_col, paso):
+                if tablero[desde_fila][col] != " ":
+                    return False
+        else:
+            paso = 1 if hasta_fila > desde_fila else -1
+            for fila in range(desde_fila + paso, hasta_fila, paso):
+                if tablero[fila][desde_col] != " ":
+                    return False
+
+        return True
