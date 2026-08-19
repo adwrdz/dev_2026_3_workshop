@@ -245,7 +245,10 @@ class Geometria:
         Returns:
             float: Volumen de la esfera
         """
-        pass
+        import math
+        if(radio <= 0):
+            return 0
+        return 4/3 * math.pi * radio **3
     
     def area_superficie_esfera(self, radio):
         """
