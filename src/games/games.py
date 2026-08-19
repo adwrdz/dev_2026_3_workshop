@@ -66,7 +66,26 @@ class Games:
              ["O", "O", " "],
              [" ", " ", " "]] -> "X"
         """
-        pass
+        lineas = []
+
+        for fila in tablero:
+            lineas.append(fila)
+
+        for col in range(3):
+            lineas.append([tablero[fila][col] for fila in range(3)])
+
+        lineas.append([tablero[i][i] for i in range(3)])
+        lineas.append([tablero[i][2 - i] for i in range(3)])
+
+        for linea in lineas:
+            if linea[0] != " " and linea[0] == linea[1] == linea[2]:
+                return linea[0]
+
+        for fila in tablero:
+            if " " in fila:
+                return "continua"
+
+        return "empate"
     
     def generar_combinacion_mastermind(self, longitud, colores_disponibles):
         """
